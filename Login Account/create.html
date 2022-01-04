@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Get Started</title>
+</head>
+<style>
+    #card {
+        margin-top: 20px;
+    }
+
+    .error {
+        border: 2px dotted red;
+    }
+
+    .success {
+        border: 2px dotted green;
+    }
+
+    #submit {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+</style>
+
+<body>
+
+    <body class="bg-dark text-white">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div id="card" class="card shadow-lg bg-dark border-white text-white text-center"
+                    style="width: 16.6rem; height: 33rem;">
+                    <div class="card-header">
+                        <span class="text-success h5">JusteBook</span>
+                    </div>
+                    <h5 class="card-title mt-3">Create Your Account</h5>
+                    <div class="card-body">
+                        <form action="" method="get">
+                            <input type="hidden" name="csrftoken"
+                                value="ea49375f43c7e6a59c77df1e4de562b3f1350124eeb70e5d5124e4ce3b5251c2b4d12e9aaf2a3ddc618c178c8dc4620b">
+                            <div class="form-group mb-3">
+                                <input type="text" name="fname" placeholder="First Name"
+                                    class="form-control bg-dark text-white" required="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" name="lname" placeholder="Last Name"
+                                    class="form-control bg-dark text-white" required="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" name="email" placeholder="Enter Email"
+                                    class="form-control bg-dark text-white" required="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="input-group bg-light" id="show_hide_password">
+                                    <input type="password" class="form-control bg-dark text-white" id="pass" value=""
+                                        name="password" placeholder="Enter Password" required="">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="input-group bg-light" id="show_hide_password">
+                                    <input type="password" class="form-control bg-dark text-white" id="con-pass"
+                                        value="" name="password" placeholder="Confirm Password" required="">
+                                </div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary" type="submit" name="submit" id="submit">Create
+                                    Account</button>
+
+                        </form>
+                    </div>
+                    <hr>
+                    <p class="small text-muted">if you have an Account <a href="login.html"
+                            class="text-primary text-decoration-none">Log In
+                        </a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        <script src="/js/bootstrap.min.js"></script>
+        <script>
+
+            const password = document.querySelector('#pass')
+            const confirm_pass = document.querySelector('#con-pass')
+            password.addEventListener('keydown', click)
+            password.addEventListener('keyup', click)
+            password.addEventListener('keypress',click)
+            password.addEventListener('focus', click)
+            password.addEventListener('blur', click)
+            confirm_pass.addEventListener('blur', match)
+            confirm_pass.addEventListener('keydown', match)
+            confirm_pass.addEventListener('keyup', match)
+            confirm_pass.addEventListener('keypress', match)
+            confirm_pass.addEventListener('focus', match)
+
+            function click(e) {
+                data = e.target.value
+                if (data <= 8) {
+                    password.classList.add('error')
+                } else {
+                    password.classList.add('success')
+                }
+            }
+
+            function match(e) {
+                valid = e.target.value
+                if (valid === password.value) {
+                    confirm_pass.classList.add('success')
+                } else {
+                    confirm_pass.classList.add('error')
+                }
+            }
+
+
+
+        </script>
+    </body>
+
+</html>
